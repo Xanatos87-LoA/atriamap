@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atria – Fantasy Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+Sk1c+YZzH1PfK3DJGnlj5y5GiUJrvzv+eB8+gPVA=" crossorigin=""/>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
+    #map { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o1fA9G+kGtmJ9wnzyU9SoUogI4EfzCU5BSfLhDG6Eq0=" crossorigin=""></script>
+  <script>
+    const map = L.map('map', {
+      crs: L.CRS.Simple,
+      minZoom: -5,
+      zoomSnap: 0.1,
+      zoomDelta: 0.1
+    });
+
+    const imageWidth = 3000;  // Adjust this if you know the real dimensions
+    const imageHeight = 3000;
+    const bounds = [[0, 0], [imageHeight, imageWidth]];
+    L.imageOverlay('map(1).jpg', bounds).addTo(map);
+    map.fitBounds(bounds);
+  </script>
+</body>
+</html>
