@@ -1,0 +1,14 @@
+{
+  "name": "Atria",
+  "version": "1.1.0",
+  "description": "",
+  "attribution": "<a href=\"https://www.maptiler.com/engine/\">Rendered with MapTiler Engine</a>, non-commercial use only",
+  "type": "baselayer",
+  "color": "#FFFFFF",
+  "format": "png",
+  "minzoom": "18",
+  "maxzoom": "23",
+  "scale": "1.000000",
+  "bounds": [0.00000000, 0.00000000, 0.00089832, 0.00089832],
+  "profile": "mercator"
+}
