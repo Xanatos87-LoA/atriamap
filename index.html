@@ -5,20 +5,27 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://cdn.maptiler.com/tileviewer/v1/index.css" type="text/css"/>
     <script src="https://cdn.maptiler.com/tileviewer/v1/index.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <script type="text/javascript">
-      // var GOOGLEMAPS_KEY = 'YOUR-API-KEY';
       var data = {
         "name": "Atria",
         "version": "1.0.0",
         "description": "",
         "type": "baselayer",
-      "color": "#FFFFFF",
+        "tiles": "./",             
+        "color": "#FFFFFF",
         "format": "png",
-        "minzoom": "1",
-        "maxzoom": "2",
-        "bounds": "0.00000000,0.00998916,99.96281335,85.05112878",
+        "minzoom": "1",            
+        "maxzoom": "2",            
+        "bounds": "0,0,100,100",   
         "scale": "1.000000",
         "profile": "mercator"
       };
