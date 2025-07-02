@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Atria</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="https://cdn.maptiler.com/tileviewer/v1/index.css" type="text/css"/>
-    <script src="https://cdn.maptiler.com/tileviewer/v1/index.js"></script>
-  </head>
-  <body>
-    <script type="text/javascript">
-      // var GOOGLEMAPS_KEY = 'YOUR-API-KEY';
-      var data = {
-        "name": "Atria",
-        "version": "1.0.0",
-        "description": "",
-        "type": "baselayer",
-        "format": "png",
-        "minzoom": "3",
-        "maxzoom": "8",
-        "bounds": "0.00000000,0.00000000,0.00089832,0.00089832",
-        "scale": "1.000000",
-        "profile": "mercator"
-      };
-      tileserver(data);
-    </script>
-  </body>
+<head>
+  <title>Atria Map</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body, #map {
+      height: 100%;
+      margin: 0;
+      background-color: #F2E6C6;
+    }
+  </style>
+
+  <!-- Load Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    // Define map bounds (must match your metadata.json)
+    const bounds = [[0, 0], [100, 100]];
+
+    const map = L.map('map', {
+      crs: L.CRS.Simple,
+      minZoom: 3,
+      maxZoom: 8,
+      maxBounds: bounds,
+      maxBoundsViscosity: 1.0,
+      zoomSnap: 1,
+      zoomControl: true,
+      attributionControl: false
+    });
+
+    map.fitBounds(bounds);
+
+    const tileLayer = L.tileLayer('./{z}/{x}/{y}.png', {
+      minZoom: 3,
+      maxZoom: 8,
+      noWrap: true,
+      bounds: bounds,
+      tileSize: 256
+    });
+
+    tileLayer.addTo(map);
+  </script>
+</body>
 </html>
