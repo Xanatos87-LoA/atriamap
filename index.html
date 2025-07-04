@@ -4,22 +4,22 @@
     <title>Atria</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://cdn.maptiler.com/tileviewer/v1/index.css" type="text/css"/>
-    <script src="https://cdn.maptiler.com/tileviewer/v1/index.js"></script>
-  </head>
-  <body>
     <script type="text/javascript">
-      // var GOOGLEMAPS_KEY = 'YOUR-API-KEY';
-      var data = {
-        "name": "Atria",
-        "version": "1.0.0",
-        "description": "",
-        "type": "baselayer",
-        "format": "png",
-        "minzoom": "3",
-        "maxzoom": "8",
-        "bounds": "0.00000000,0.00000000,100.00000000,100.00000000",
-        "scale": "1.000000",
-        "profile": "mercator"
+  var data = {
+    "name": "Atria",
+    "version": "1.0.0",
+    "description": "",
+    "type": "baselayer",
+    "format": "png",
+    "minzoom": 3,
+    "maxzoom": 8,
+    "bounds": [0, 0, 100, 100], 
+    "scale": "1.000000",
+    "profile": "custom", 
+    "crs": "EPSG:3857"    
+  };
+  tileserver(data);
+</script>
       };
       tileserver(data);
     </script>
