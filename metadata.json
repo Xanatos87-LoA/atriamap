@@ -9,7 +9,7 @@
   "minzoom": "3",
   "maxzoom": "8",
   "scale": "1.000000",
-  "bounds": [0.00000000, 0.00000000, 100.00000000, 100.00000000],
+  "bounds": [0.00000000, 0.00000000, 0.00089832, 0.00089832],
   "profile": "custom",
   "crs": "EPSG:3857",
   "proj4": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs",
